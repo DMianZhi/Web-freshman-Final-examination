@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*    overflow: hidden; */
+    background: linear-gradient(-45deg, #CCFF66, #CCFFFF, #FFFFFF, #23a6d5, #99CCFF, #336699, #003366);
+    background-size: 1000% 1000%;
+    animation: identifier 10s ease infinite;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    /* 弹性子项目主轴的对齐方式：space-around两边均分主轴上的空余空间 */
+    align-content: flex-start;
+    /* 弹性子项目侧轴的对齐方式：flex-start两边均分侧轴上的空余空间 */
+    align-items: center;
+    /* 子项目的对齐方式：居中 */
+    padding: 20px 10%;
+    /* 内边距：上下20px，左右10% */
+}
+
+.wcontainer {
+    display: flex;
+    justify-content: space-around;
+    /* justify-content: flex-start; */
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    /* justify-content: flex-start; */
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 80%;
+}
+
+
+
+nav li,
+a,
+button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    /* 文本字符的大小 */
+    font-weight: 500;
+    /* 文本的粗细 */
+    text-decoration: none;
+    /* 去除a标签的下划线 */
+    color: aquamarine;
+}
+
+.nav-links {
+    list-style: none;
+    /* 去除列表默认的小黑点 */
+}
+
+.nav-links li {
+    display: inline-block;
+    /* 变为行内样式 */
+    padding: 0px 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.nav-links li:nth-child(2) {
+    text-decoration: underline;
+    /* 点击后显示下划线 */
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0.1s;
+    /* 过渡0.3s，缓慢0.1s */
+}
+
+.nav-links li a:hover {
+    color: rgba(0, 136, 169, 0.7);
+    /* a标签点击后显示的颜色 */
+}
+
+button {
+    padding: 5px 25px;
+    background-color: cadetblue;
+    border-radius: 50px;
+    cursor: pointer;
+    /* 鼠标经过后鼠标显示小手 */
+    transition: all 0.3s ease 0.1s;
+    /* 过渡0.3s，缓慢0.1s */
+    border: none;
+    border: 1px solid #000;
+    overflow: hidden;
+    position: relative;
+}
+
+
+button::before {
+    content: "";
+    width: 60%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: 100px;
+    transform: skewX(-15deg);
+    transition: 0.4s;
+
+}
+
+button::after {
+    content: "";
+    width: 60%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: -70px;
+    transform: skewX(-15deg);
+    transition: 0.4s;
+    /*  transition-delay: 0.2s; */
+
+}
+
+button:hover:after {
+    left: 44px;
+}
+
+button:hover:before {
+    left: -10px;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.7);
+}
+
+.nav-links li::before {
+    content: "";
+    width: 70%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: -80px;
+    transform: skewX(-15deg);
+    transition: 0.5s;
+
+}
+
+.nav-links li::after {
+    content: "";
+    width: 30%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: -70px;
+    transform: skewX(-15deg);
+    transition: 0.5s;
+    transition-delay: 0.2s;
+
+}
+
+.nav-links li:hover:after {
+    left: 200px;
+}
+
+.nav-links li:hover:before {
+    left: 200px;
+}
+
+.card1 {
+    display: flex;
+    /* 弹性布局 */
+    justify-content: center;
+    /* 弹性布局子项目主轴的对齐方式：居中 */
+    align-items: center;
+    /* 弹性布局子项目侧轴的对齐方式：居中 */
+    height: 400px;
+    width: 350px;
+    border-radius: 20px;
+    /* 圆角 */
+    background: url(./img/内马尔2.png) center left no-repeat;
+    /*no-repeat：取消源背景，显示图片。center left：显示中左部分  */
+    background-size: 350px;
+    box-shadow: 0 70px 60px -60px black;
+    /* 边框阴影： X 轴偏移量、Y 轴偏移量、模糊半径、扩散半径和颜色。*/
+    margin-bottom: 20px;
+}
+
+.card2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 350px;
+    border-radius: 20px;
+    background: url(./img/7.jpg) center left no-repeat;
+    background-size: 350px;
+    box-shadow: 0 70px 60px -60px black;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+.card3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 350px;
+    border-radius: 20px;
+    background: url(./img/14.jpg) center left no-repeat;
+    background-size: 350px;
+    box-shadow: 0 70px 60px -60px black;
+    margin-bottom: 20px;
+}
+
+.card4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 350px;
+    border-radius: 20px;
+    background: url(./img/10.jpg) center center no-repeat;
+    background-size: 350px;
+    box-shadow: 0 70px 60px -60px black;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.container img{
+    width: 1000px; 
+    box-shadow: 0 70px 60px -60px black;
+    margin-bottom: 20px; border-radius: 5px;
+}
+
+.container img:hover{
+    width: 1210px;
+}
+
+.card1:hover {
+    background: url(./img/内马尔2.png)top right no-repeat;
+    background-size: 500px;
+
+}
+
+.card2:hover {
+    background: url(./img/8.jpg)top center no-repeat;
+    background-size: 450px;
+
+}
+
+
+.card3:hover {
+    background: url(./img/10.jpg) top center no-repeat;
+    background-size: 450px;
+
+}
+
+.card3:hover {
+    background: url(./img/11.jpg) bottom center no-repeat;
+    background-size: 450px;
+
+}
+
+.card4:hover {
+    background: url(./img/13.jpg) top center no-repeat;
+    background-size: 530px;
+
+}
+
+
+.card1,
+.card2,
+.card3,
+.card4 {
+    transition: background 1.5s, opacity 0.7s;
+    /* 过渡：背景1s；透明度：0.7 */
+}
+.container img{
+    transition: 1s;
+}
+
+
+@keyframes identifier {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

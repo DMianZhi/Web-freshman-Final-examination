@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*    overflow: hidden; */
+    background: linear-gradient(-45deg, #FF9966, #FFCCCC, #FF6666, #FFCCCC);
+    background-size: 1000% 1000%;
+    animation: identifier 10s ease infinite;
+}
+
+@keyframes identifier {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    /* 弹性子项目主轴的对齐方式：space-around两边均分主轴上的空余空间 */
+    align-content: flex-start;
+    /* 弹性子项目侧轴的对齐方式：flex-start两边均分侧轴上的空余空间 */
+    align-items: center;
+    /* 子项目的对齐方式：居中 */
+    padding: 20px 10%;
+    /* 内边距：上下20px，左右10% */
+    background-color: #FFCCCC;
+}
+
+li,
+a,
+button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    /* 文本字符的大小 */
+    font-weight: 500;
+    /* 文本的粗细 */
+    text-decoration: none;
+    /* 去除a标签的下划线 */
+    color: aquamarine;
+}
+
+.nav-links {
+    list-style: none;
+    /* 去除列表默认的小黑点 */
+}
+
+.nav-links li {
+    display: inline-block;
+    /* 变为行内样式 */
+    padding: 0px 20px;
+    overflow: hidden;
+    position: relative; 
+}
+
+.nav-links li:nth-child(3) {
+    text-decoration: underline;
+    /* 点击后显示下划线 */
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0.1s;
+    /* 过渡0.3s，缓慢0.1s */
+}
+
+.nav-links li a:hover {
+    color: rgba(0, 136, 169, 0.7);
+    /* a标签点击后显示的颜色 */
+}
+
+button {
+    padding: 5px 25px;
+    background-color: cadetblue;
+    border-radius: 50px;
+    cursor: pointer;
+    /* 鼠标经过后鼠标显示小手 */
+ /*    transition: all 0.3s ease 0.1s; */
+        /* 过渡0.3s，缓慢0.1s */
+
+    border: 1px solid #000;   
+    overflow: hidden;
+    position: relative; 
+}
+button::before{
+    content: "";
+    width: 60%;
+    height: 100%;
+    background-color: rgb(255, 255, 255,0.3);
+    position: absolute;
+    top: 0;
+    left: 100px;
+    transform: skewX(-15deg);
+    transition: 0.4s;
+
+}
+button::after{
+    content: "";
+    width: 60%;
+    height: 100%;
+    background-color: rgb(255, 255, 255,0.3);
+    position: absolute;
+    top: 0;
+    left: -70px;
+    transform: skewX(-15deg);
+    transition: 0.4s;
+   /*  transition-delay: 0.2s; */
+
+}
+
+button:hover:after{
+    left: 44px;
+}
+
+button:hover:before{
+    left: -10px;
+}
+
+.nav-links li::before{
+    content: "";
+    width: 70%;
+    height: 100%;
+    background-color: rgb(255, 255, 255,0.3);
+    position: absolute;
+    top: 0;
+    left: -80px;
+    transform: skewX(-15deg);
+    transition: 0.5s;
+
+}
+.nav-links li::after{
+    content: "";
+    width: 30%;
+    height: 100%;
+    background-color: rgb(255, 255, 255,0.3);
+    position: absolute;
+    top: 0;
+    left: -70px;
+    transform: skewX(-15deg);
+    transition: 0.5s;
+    transition-delay: 0.2s;
+
+}
+
+.nav-links li:hover:after{
+    left: 200px;
+}
+
+.nav-links li:hover:before{
+    left: 200px;
+}

@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*   overflow: hidden; */
+  background: linear-gradient(-45deg, #CCFF66, #CCFFFF, #FFFFFF, #23a6d5, #99CCFF, #336699, #003366);
+  background-size: 1000% 1000%;
+  animation: identifier 10s ease infinite;
+}
+
+
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: center;
+  padding: 20px 10%;
+  /*  background: inherit; */
+}
+
+header li,
+a,
+button {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: aquamarine;
+}
+
+header .nav-links {
+  list-style: none;
+}
+
+header .nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+header .nav-links li:nth-child(1) {
+  text-decoration: underline;
+}
+
+header .nav-links li a {
+  transition: all 0.3s ease 0.1s;
+}
+
+header .nav-links li a:hover {
+  color: rgba(0, 136, 169, 0.7);
+}
+
+header button {
+  padding: 5px 25px;
+  background-color: cadetblue;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0.1s;
+  border: 1px solid #000;
+  overflow: hidden;
+  position: relative;
+}
+
+header button:hover {
+  background-color: rgba(0, 136, 169, 0.7);
+
+}
+
+
+header button::before {
+  content: "";
+  width: 60%;
+  height: 100%;
+  background-color: rgb(255, 255, 255, 0.3);
+  position: absolute;
+  top: 0;
+  left: 100px;
+  transform: skewX(-15deg);
+  transition: 0.4s;
+
+}
+
+header button::after {
+  content: "";
+  width: 60%;
+  height: 100%;
+  background-color: rgb(255, 255, 255, 0.3);
+  position: absolute;
+  top: 0;
+  left: -70px;
+  transform: skewX(-15deg);
+  transition: 0.4s;
+  /*  transition-delay: 0.2s; */
+
+}
+
+header button:hover:after {
+  left: 44px;
+}
+
+header button:hover:before {
+  left: -10px;
+}
+
+.nav-links li::before {
+  content: "";
+  width: 70%;
+  height: 100%;
+  background-color: rgb(255, 255, 255, 0.3);
+  position: absolute;
+  top: 0;
+  left: -80px;
+  transform: skewX(-15deg);
+  transition: 0.5s;
+
+}
+
+.nav-links li::after {
+  content: "";
+  width: 30%;
+  height: 100%;
+  background-color: rgb(255, 255, 255, 0.3);
+  position: absolute;
+  top: 0;
+  left: -70px;
+  transform: skewX(-15deg);
+  transition: 0.5s;
+  transition-delay: 0.2s;
+
+}
+
+.nav-links li:hover:after {
+  left: 200px;
+}
+
+.nav-links li:hover:before {
+  left: 200px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  /*  space-around：弹性子项目两边均分主轴上的空余空间*/
+  align-items: center;
+  flex-wrap: wrap;
+  /* 弹性子项目之间的对齐方式 */
+  height: 100vh;
+  /* 获取窗口的全部高度 */
+
+}
+
+.card1 {
+  display: flex;
+  justify-content: center;
+  /*  align-items: center; */
+  height: 360px;
+  width: 540px;
+  border-radius: 20px;
+  background: url(img/1.jpeg) center left no-repeat;
+  background-size: 540px;
+  box-shadow: 0 70px 60px -60px black;
+  margin-bottom: 25px;
+}
+
+.card2 {
+  display: flex;
+  justify-content: center;
+  /*   align-items: center; */
+  height: 340px;
+  width: 540px;
+  border-radius: 20px;
+  background: url(./img//3.jpg) left no-repeat;
+  background-size: 540px;
+  box-shadow: 0 70px 60px -60px black;
+  margin-bottom: 27px;
+}
+
+.card4 {
+  display: flex;
+  justify-content: center;
+  /*   align-items: center; */
+  height: 340px;
+  width: 540px;
+  border-radius: 20px;
+  background: url(./img/国旗.jpg) left no-repeat;
+  background-size: 540px;
+  box-shadow: 0 70px 60px -60px black;
+  margin-bottom: 80px;
+}
+
+.card5 {
+  display: flex;
+  justify-content: center;
+  /*   align-items: center; */
+  height: 340px;
+  width: 540px;
+  border-radius: 20px;
+  background: url(./img/18.jpg) left no-repeat;
+  background-size: 540px;
+  box-shadow: 0 70px 60px -60px black;
+  margin-bottom: 80px;
+}
+
+
+.card3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 440px;
+  width: 1280px;
+  border-radius: 20px;
+  background: url(./img/R-C\ \(1\).jpg) center center no-repeat;
+  background-size: 1280px;
+
+  /*  box-shadow: 0 70px 60px -60px black; */
+}
+
+
+
+.card1:hover {
+  background: url(img/R-C\ \(3.1\).jpg) top right no-repeat;
+  background-size: 700px;
+
+}
+
+.card2:hover {
+  background: url(img/2.1.png) right no-repeat;
+  background-size: 900px;
+
+}
+
+.card3:hover {
+  background: url(img/ba001.jpg) center no-repeat;
+  background-size: 1300px;
+
+}
+
+.card4:hover {
+  background: url(img/17.jpg) center no-repeat;
+  background-size: 580px;
+
+}
+
+.card5:hover {
+  background: url(img/18.jpg) top right no-repeat;
+  background-size: 800px;
+
+}
+
+.card1,
+.card2,
+.card4,
+.card5 {
+  transition: background 1s, opacity 0.7s;
+}
+
+.card3 {
+  transition: background 1.5s, opacity 0.7s;
+}
+
+
+@keyframes identifier {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

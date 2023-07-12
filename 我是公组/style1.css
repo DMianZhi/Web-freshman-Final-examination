@@ -1,0 +1,157 @@
+html,
+body {
+    margin: 0;
+    font-family: "PingFang SC", "Microsoft Yahei", sans-serif;
+
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /* 居中对齐弹性盒的各项 <div> 元素与display: flex;一起出现*/
+    justify-content: center;
+    /* 居中排列 （横轴）*/
+    background: url(./1.jpeg) fixed no-repeat;
+    background-size: cover;
+    /*保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小 */
+
+}
+
+.login-form {
+    width: 240px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    /* 规定灵活项目的方向,垂直显示 */
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    /* 生成相对定位的元素，相对于其正常位置进行定位 */
+    z-index: 100;
+    background: inherit;
+    /* inherit继承上一个背景 */
+    border-radius: 18px;
+    overflow: hidden;
+    /* 内容会被修剪，并且其余内容是不可见的。(修剪外边框) */
+}
+
+.login-form::before {
+    content: "";
+    width: calc(100% + 20px);
+    /* 保持合适的外边距的 */
+    height: calc(100% + 20px);
+    position: absolute;
+    /* 让表单里的内容保持绝对位置 */
+    top: -10px;
+    left: -10px;
+    overflow: hidden;
+    background: initial;
+    box-shadow: inset 0 0 0 200px rgb(255, 255, 255, 0.25);
+    /*给表单边框一个玻璃色*/
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.login-form h2 {
+    /* 标题 */
+    font-size: 18px;
+    font-weight: 400;
+    color: #3d5245;
+
+}
+
+.login-form input,
+.login-form button {
+    margin: 6px 0;
+    /* 三个框的上下间距 */
+    height: 36px;
+    /* 三个框的上下高度 */
+    border: none;
+    /* 去除三个的边框 */
+    background-color: rgba(255, 255, 255, 0.3);
+    /*给三个边框一个玻璃色*/
+    border-radius: 4px;
+    padding: 0 14px;
+    /* 控制输入框内的文字位置 */
+    color: #3d5245;
+}
+
+.login-form input::placeholder {
+    color: #3d5245;
+    /* 输入框内的文字颜色 */
+}
+
+.login-form button:focus,
+/* :focus选择器用于选择具有焦点的元素。 */
+.login-form input:focus {
+    outline: 0;
+    /* 去除点击边框的效果 */
+}
+
+.login-form button {
+    margin: top 24px;
+    background-color: rgba(209, 179, 9, 0.4);
+    color: #fff;
+    position: relative;
+    /* 生成相对定位的元素，相对于其正常位置进行定位 */
+    overflow: hidden;
+    /* 内容会被修剪，并且其余内容是不可见的。 */
+    cursor: pointer;
+    /* 鼠标经过时变为手指 */
+
+}
+
+
+
+.login-form button:hover {
+    background-color: rgba(209, 179, 9, 0.7);
+    /* 鼠标经过效果 */
+    transition: 0.9s;
+}
+
+.login-form button::before,
+.login-form button ::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 100px;
+    background: rgba(179, 255, 210, 0.5);
+    opacity: 0.5;
+    /* 透明度 */
+    position: absolute;
+    /* 绝对定位 */
+    top: 0;
+    left: 0;
+    -webkit-transform: skew(-15deg);
+    transform: translateX(-100px);
+    filter: blur(30px);
+    /* 图像设置高斯模糊 */
+    overflow: hidden;
+    /* 内容会被修剪，并且其余内容是不可见的。*/
+
+
+}
+
+.login-form button:hover::after {
+    width: 40px;
+    background: rgba(179, 255, 210, 0.3);
+    left: 60px;
+    opacity: 0;
+    filter: blur(5px);
+    transition: 1s;
+    transform: translateX(320px);
+    opacity: 1s;
+}
+
+.login-form button:hover::before {
+    transition: 1s;
+    transform: translateX(320px);
+    opacity: 0.7s;
+}
+
+a{
+    text-decoration: none;
+    color: #3d5245;
+}

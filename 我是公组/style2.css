@@ -1,0 +1,22 @@
+body {
+  background: linear-gradient(-45deg, #FF9966, #FFCCCC, #FF6666, #FFCCCC);
+  /* 渐变色 */
+  background-size: 1000% 1000%;
+  animation: identifier 10s ease infinite;
+  /* css3技术，动画、动画名称、动画时间（周期）、缓慢的、无限循环 */
+}
+
+@keyframes identifier {
+  0% {
+    background-position: 0% 50%;
+    /* 位置：主轴0，即没有移动、侧轴50，即在中间 */
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
